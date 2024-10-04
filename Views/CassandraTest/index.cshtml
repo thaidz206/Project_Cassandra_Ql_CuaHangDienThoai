@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Cassandra Test";
+}
+
+<h2>Data from Cassandra</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Brand ID</th>
+            <th>Brand Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var row in ViewBag.Brands)
+        {
+            <tr>
+                <td>@row["brand_id"]</td>
+                <td>@row["brand_name"]</td>
+            </tr>
+        }
+    </tbody>
+</table>
